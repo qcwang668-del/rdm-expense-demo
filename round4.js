@@ -1,0 +1,41 @@
+﻿(function () {
+  const U = {
+    receive: '\u9886\u6599\u7533\u8bf7',
+    alloc: '\u652f\u51fa\u5206\u914d\u6c47\u603b',
+    labor: '\u4eba\u5458\u4eba\u5de5\u8d39\u7528',
+    depreciation: '\u6298\u65e7\u8d39\u7528',
+    basic: '\u57fa\u672c\u4fe1\u606f'
+  };
+  const pageData = {};
+  pageData[U.receive] = {
+    title: '\u9886\u6599\u7533\u8bf7\u5217\u8868',
+    filters: ['\u9886\u6599\u65e5\u671f','\u9879\u76ee\u7f16\u53f7','\u9879\u76ee\u540d\u79f0','\u9886\u6599\u4eba'],
+    actions: ['\u5bfc\u51fa'],
+    columns: ['\u9886\u6599\u7f16\u53f7','\u9886\u6599\u65e5\u671f','\u9879\u76ee\u7f16\u53f7','\u9879\u76ee\u540d\u79f0','\u5173\u8054\u9886\u6599\u6e05\u5355','\u9886\u6599\u4eba','\u7269\u6599\u7f16\u53f7','\u7269\u6599\u540d\u79f0','\u6750\u6599\u6295\u5165\u7c7b\u522b','\u521b\u5efa\u4eba'],
+    rows: [['001','2026-03-01','XM001','\u5b66\u5bcc\u7f51','','\u548c\u7f8e','3333','\u7535\u8111\u8bbe\u5907','\u7814\u53d1\u4e13\u7528\u6750\u6599\u6295\u5165','\u738b\u96c1'],['002','2026-03-03','XM002','\u529b\u4f01\u4e91','','\u674e\u56db','00000','\u94a2\u7b14','\u7814\u53d1\u4e13\u7528\u6750\u6599\u6295\u5165','\u738b\u96c1']]
+  };
+  pageData[U.alloc] = {
+    title: '\u4eba\u5de5\u8d39\u7528\u9879\u76ee\u5206\u914d\u5217\u8868',
+    tabs: ['\u7814\u53d1\u8d39\u7528\u52a0\u8ba1\u6263\u9664','\u9ad8\u65b0\u6280\u672f\u4f01\u4e1a\u8ba4\u5b9a','\u4eba\u5de5\u8d39\u7528\u9879\u76ee\u5206\u914d\u8868','\u6750\u6599\u53ca\u5176\u4ed6\u6295\u5165\u8d39\u7528\u6c47\u603b\u8868','\u56fa\u5b9a\u8d44\u4ea7\u6298\u65e7\u8d39\u7528\u9879\u76ee\u5206\u914d\u8868','\u65e0\u5f62\u8d44\u4ea7\u644a\u9500\u8d39\u7528\u9879\u76ee\u5206\u914d\u8868','\u7ecf\u8425\u79df\u8d41\u8d44\u4ea7\u8d39\u7528\u9879\u76ee\u5206\u914d\u8868','\u65b0\u4ea7\u54c1\u8bbe\u8ba1\u8d39\u7b49\u9879\u76ee\u6c47\u603b\u8868','\u5176\u4ed6\u76f8\u5173\u8d39\u7528\u6c47\u603b\u8868','\u59d4\u6258\u7814\u53d1\u8d39\u7528\u9879\u76ee\u6c47\u603b\u8868','\u5e94\u51b2\u51cf\u7814\u53d1\u8d39\u7528\u6c47\u603b\u8868','\u5ba1\u8ba1\u8c03\u6574\u7814\u53d1\u8d39\u7528\u6c47\u603b\u8868'],
+    filters: ['\u9879\u76ee\u7f16\u53f7','\u9879\u76ee\u540d\u79f0','\u8d39\u7528\u6708\u4efd'],
+    actions: ['\u4e00\u952e\u66f4\u65b0\u6570\u636e','\u5bfc\u51fa'],
+    topAction: '\u4e00\u952e\u751f\u6210\u5206\u914d\u6c47\u603b\u6570\u636e',
+    columns: ['\u8d39\u7528\u6708\u4efd','\u9879\u76ee\u540d\u79f0','\u9879\u76ee\u7f16\u53f7','\u9879\u76ee\u7c7b\u578b','\u5de5\u8d44\u91d1\u989d(\u5143)','\u4f4f\u623f\u516c\u79ef\u91d1(\u5143)','\u57fa\u672c\u517b\u8001\u4fdd\u9669\u91d1\u989d(\u5143)','\u5931\u4e1a\u4fdd\u9669\u91d1\u989d(\u5143)','\u57fa\u672c\u533b\u7597\u4fdd\u9669(\u542b\u751f\u80b2)\u91d1\u989d(\u5143)','\u5de5\u4f24\u4fdd\u9669\u91d1\u989d(\u5143)','\u80a1\u6743\u6fc0\u52b1\u91d1\u989d/\u5956\u91d1(\u5143)','\u5916\u8058\u7814\u53d1\u4eba\u5458\u7684\u52b3\u52a1\u8d39\u7528(\u5143)'],
+    rows: [['2025-11','\u5b66\u5bcc\u7f51','XM001','\u8d39\u7528\u5316\u7814\u53d1\u9879\u76ee','3,966.34','641.28','63.94','32.58','32.58','32.58','2,814.08','0.00'],['2025-11','\u529b\u4f01\u4e91','XM002','\u8d44\u672c\u5316\u7814\u53d1\u9879\u76ee','4,620.32','1,022.13','101.92','51.93','51.93','51.93','1,267.54','0.00'],['2025-12','\u5b66\u5bcc\u7f51','XM001','\u8d39\u7528\u5316\u7814\u53d1\u9879\u76ee','0.00','0.00','0.00','0.00','0.00','0.00','0.00','0.00'],['2025-12','\u529b\u4f01\u4e91','XM002','\u8d44\u672c\u5316\u7814\u53d1\u9879\u76ee','0.00','0.00','0.00','0.00','0.00','0.00','0.00','0.00']]
+  };
+  pageData[U.labor] = {
+    title: '\u4eba\u5458\u4eba\u5de5\u8d39\u7528\u5217\u8868', filters: ['\u8d39\u7528\u6708\u4efd','\u5458\u5de5\u5de5\u53f7','\u5458\u5de5\u59d3\u540d','\u9879\u76ee\u7f16\u53f7'], actions: ['\u65b0\u589e','\u5bfc\u51fa','\u5bfc\u5165','\u6279\u91cf\u5220\u9664'], columns: ['\u8d39\u7528\u6708\u4efd','\u5458\u5de5\u5de5\u53f7','\u5458\u5de5\u59d3\u540d','\u9879\u76ee\u7f16\u53f7','\u9879\u76ee\u540d\u79f0','\u5de5\u8d44\u91d1\u989d(\u5143)','\u4f4f\u623f\u516c\u79ef\u91d1(\u5143)','\u57fa\u672c\u517b\u8001\u4fdd\u9669(\u5143)','\u5931\u4e1a\u4fdd\u9669(\u5143)','\u533b\u7597\u4fdd\u9669(\u5143)','\u5de5\u4f24\u4fdd\u9669(\u5143)','\u64cd\u4f5c'], rows: [['2025-11','001','\u5f20\u4e09','XM001','\u5b66\u5bcc\u7f51','3,966.34','641.28','63.94','32.58','32.58','32.58','\u4fee\u6539  \u5220\u9664'],['2025-11','002','\u674e\u56db','XM002','\u529b\u4f01\u4e91','4,620.32','1,022.13','101.92','51.93','51.93','51.93','\u4fee\u6539  \u5220\u9664']]
+  };
+  pageData[U.depreciation] = {
+    title: '\u56fa\u5b9a\u8d44\u4ea7\u6298\u65e7\u8d39\u7528\u5217\u8868', filters: ['\u8d39\u7528\u6708\u4efd','\u8d44\u4ea7\u7f16\u53f7','\u9879\u76ee\u7f16\u53f7'], actions: ['\u65b0\u589e','\u5bfc\u51fa','\u5bfc\u5165'], columns: ['\u8d39\u7528\u6708\u4efd','\u8d44\u4ea7\u7f16\u53f7','\u8d44\u4ea7\u540d\u79f0','\u9879\u76ee\u7f16\u53f7','\u9879\u76ee\u540d\u79f0','\u6298\u65e7\u91d1\u989d(\u5143)','\u521b\u5efa\u4eba','\u64cd\u4f5c'], rows: [['2025-11','GD001','\u7814\u53d1\u670d\u52a1\u5668','XM001','\u5b66\u5bcc\u7f51','2,083.33','\u738b\u96c1','\u4fee\u6539  \u5220\u9664']]
+  };
+
+  function currentPage() { return document.querySelector('.tab.active')?.dataset.page || document.querySelector('.sub-link.selected')?.dataset.page || ''; }
+  function field(label) { if (/\u65e5\u671f|\u6708\u4efd/.test(label)) return '<div class="input-like range-like"><input placeholder="' + label + '"><b></b><input placeholder="\u7ed3\u675f\u65f6\u95f4"></div>'; if (/\u4eba|\u7c7b\u522b|\u72b6\u6001/.test(label)) return '<div class="input-like"><input placeholder="\u8bf7\u9009\u62e9' + label + '"><em>⌄</em></div>'; return '<div class="input-like"><input placeholder="' + label + '"></div>'; }
+  function actions(value) { const p = String(value).split(/\s+/).filter(Boolean); return p.length > 1 ? p.map(a => '<button data-row-action="' + a + '">' + a + '</button>').join('') : value; }
+  function render(cfg) { const tabs = cfg.tabs ? '<div class="inner-tabs">' + cfg.tabs.map((t,i)=>'<button class="inner-tab '+(i===0||i===2?'active':'')+'">'+t+'</button>').join('') + '</div>' : ''; const top = cfg.topAction ? '<button class="primary-btn alloc-generate">' + cfg.topAction + '</button>' : ''; return tabs + top + '<section class="filter-card"><div class="filter-grid">' + cfg.filters.map(f=>'<label class="form-item"><span>'+f+'</span>'+field(f)+'</label>').join('') + '</div><div class="filter-actions"><button class="ghost-btn">\u91cd \u7f6e</button><button class="primary-btn">\u641c \u7d22</button><button class="link-btn">\u6536\u8d77</button></div></section><section class="table-card"><div class="table-head"><h1>'+cfg.title+'</h1><div class="table-actions">'+cfg.actions.map((a,i)=>'<button class="'+(i?'ghost-btn':'primary-btn')+'" '+(a.includes('\u6279\u91cf')?'disabled':'')+'>'+a+'</button>').join('')+'</div><div class="table-tools"><button title="\u5237\u65b0"></button><button title="\u5bc6\u5ea6"></button><button title="\u5217\u8bbe\u7f6e"></button><button title="\u5168\u5c4f"></button></div></div><div class="table-scroll"><table data-enhanced="1"><thead><tr><th class="check-col"><span class="checkbox header-checkbox"></span></th>'+cfg.columns.map(c=>'<th>'+c+'</th>').join('')+'</tr></thead><tbody>'+cfg.rows.map(r=>'<tr><td class="check-col"><span class="checkbox"></span></td>'+r.map((c,i)=>'<td class="'+(i===r.length-1?'row-actions':'')+'">'+(i===r.length-1?actions(c):c)+'</td>').join('')+'</tr>').join('')+'</tbody></table></div><div class="pager"><span>\u5171 '+cfg.rows.length+' \u6761\u8bb0\u5f55</span><button></button><button></button><button></button><button class="active">1</button><button></button><button></button><button></button><select><option selected>20\u6761/\u9875</option><option>10\u6761/\u9875</option><option>50\u6761/\u9875</option></select></div></section>'; }
+  function apply() { const name = currentPage(); const cfg = pageData[name]; const content = document.querySelector('.content'); if (!cfg || !content || content.dataset.round4Page === name) return; content.dataset.round4Page = name; content.innerHTML = render(cfg); }
+  document.addEventListener('click', () => setTimeout(apply, 120), true);
+  new MutationObserver(apply).observe(document.body, { childList: true, subtree: true });
+  setTimeout(apply, 300);
+})();
